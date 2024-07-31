@@ -30,8 +30,11 @@ N개의 양의 정수에서 가장 큰 수와 가장 작은 수의 차이를 출
 # 수도코드 작성시 참고사항
 # 비교 연산자 사용 시 배정 연산과 비교문 순서를 맞춰주는게 정리하기 쉬움
 
+import sys
+sys.stdin = open("C:/Users/SSAFY/Downloads/sample_input (2).txt", "r")
+
 T = int(input())  # 테스트케이스 개수
-for tc in range(1, T+1):
+for test_case in range(1, T + 1):
     N = int(input())
     arr = list(map(int, input().split()))
 
@@ -45,4 +48,4 @@ for tc in range(1, T+1):
         if min_v > arr[i]:
             min_v = arr[i]
 
-    print(f'#{tc} {max_v - min_v}')
+    print(f'#{test_case} {max_v - min_v}')

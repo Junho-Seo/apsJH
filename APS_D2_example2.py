@@ -1,4 +1,4 @@
-# SWEA solving club DAT 삼성 시의 버스 노선
+# SWEA solving club DAT 삼성시의 버스 노선
 import sys
 sys.stdin = open('input.txt', 'r')
 
