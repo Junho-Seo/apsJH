@@ -6,13 +6,36 @@ sys.stdout = open("output1210.txt", "w")
 
 for _ in range(10):
     test_case = int(input())
-    arr = [list(map(int, input().split())) for _ in range(100)]
+    ladder = [list(map(int, input().split())) for _ in range(100)]
 
-    # 1. 첫 번째 열에서 1이 들어있는 칸을 탐색 (좌측부터)
-    # 2. 해당 칸에서 아래 방향으로 0이 나올때까지 탐색
-    # 3. 0이 나올 경우 바로 전 칸에서 좌측 혹은 우측에 1이 있는 칸으로 0이 나올 때까지 탐색
-    #   (첫 행에서는 좌측, 마지막 행에서는 우측으로는 진행 불가)
-    # 4. 0을 만나면 다시 아래 방향으로 탐색
-    # 5. 2~4 반복
-    # 6. 2를 만나면 해당 인덱스 좌표 출력
+    # 도착점 좌표 탐색
+    end_point = 0
+    for j in range(100):
+        if ladder[99][j] == 2:
+            end_point = j       # 도착점은 (j, 99)
+
+    # 방향 설정 (좌 위 우)
+    di = [0, -1, 0]
+    dj = [1, 0, -1]
+    # 시작 인덱스 설정
+    new_i = 99
+    new_j = end_point
+    while new_i != 0:   # column 이 1이 아니면 끝
+        for k in range(3):
+            if ladder[new_i+di[k]][new_j+dj[k]] == 1:
+                ladder[new_i][new_j] = 2
+                new_i += di[k]
+                new_j += dj[k]
+                break
+    # 범위를 벗어나면 끝남 (예외처리)
+        if new_i < 0 or new_j < 0 or new_i >= 100 or new_j >= 100:
+            break
+    print(f'#{test_case} {new_j - 1}')
+    # for k in range(99 , 0, -1):
+    #     if end_point
+
+
+    # 출발점을 찾기 위해 도착점부터 거꾸로 올라간다.
+    # 1을탐색하며 올라가고 좌우 탐색이 상단 탐색보다 우선된다.
+
 
