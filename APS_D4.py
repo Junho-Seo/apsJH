@@ -14,13 +14,16 @@ B = [4, 3, 2, 1]
 selection_sort(A, len(A))
 selection_sort(B, len(B))
 
+# 교안 연습문제3(달팽이 숫자)
+# 유사문제 SC_List2_1954 파일 참고
+
 # 정렬 복습 (버블, 카운팅, 선택)
 
 numbers = [34, 24, 23, 55, 63, 29, 19, 3, 99, 45]
 
 
 # 버블 정렬 O(N^2)
-# 뒤에서부터 확정
+# 뒤에서부터 정렬
 def bubble_sort(arr):
     n = len(arr)
     cnt = 0
@@ -37,7 +40,12 @@ print("Numbers: ", numbers)
 print("Bubble Sort:", bubbles)
 print("수행횟수: ", cnt)
 print('------------------------------')
-
+'''
+Numbers:  [34, 24, 23, 55, 63, 29, 19, 3, 99, 45]
+Bubble Sort: [3, 19, 23, 24, 29, 34, 45, 55, 63, 99]
+수행횟수:  45
+------------------------------
+'''
 
 # 카운팅 정렬 O(N+K) (응용 버전 -> DAT)
 # counts 배열을 이용한 정렬
@@ -79,7 +87,12 @@ print("Numbers: ", numbers)
 print("Counting Sort:", counts)
 print("수행횟수: ", cnt)
 print('------------------------------')
-
+'''
+Numbers:  [34, 24, 23, 55, 63, 29, 19, 3, 99, 45]
+Counting Sort: [3, 19, 23, 24, 29, 34, 45, 55, 63, 99]
+수행횟수:  130
+------------------------------
+'''
 
 # 선택 정렬 O(N^2)
 # 1. numbers를 순회하면서
@@ -105,9 +118,14 @@ print("Numbers: ", numbers)
 print("Selections Sort:", selections)
 print("수행횟수: ", cnt)
 print('------------------------------')
+'''
+Numbers:  [34, 24, 23, 55, 63, 29, 19, 3, 99, 45]
+Selections Sort: [3, 19, 23, 24, 29, 34, 45, 55, 63, 99]
+수행횟수:  55
+------------------------------
+'''
 
-
-# 범위가 좁을수록 counting sort가 유리 (연산 횟수; 시간 복잡도 기준)
+# '수'의 범위가 좁을수록 counting sort가 유리 (연산 횟수; 시간 복잡도 기준)
 
 
 # 이진 탐색
@@ -152,3 +170,20 @@ binary_search(3)
 binary_search(1)
 binary_search(14)
 binary_search(50)
+'''
+6번 만에 검색 완료!
+2번 만에 검색 완료!
+4번 만에 검색 완료!
+5번 만에 검색 완료!
+6번 만에 검색 완료!
+6번 만에 검색 완료!
+'''
+
+def my_abs(num):
+    if type(num) == type(1) or type(num) == type(1.0): # 정수 혹은 실수인 경우
+        if num >= 0: return num
+        else: return -num
+    elif type(num) == type(1j): # 복소수인 경우
+        return (num.real ** 2 + num.imag ** 2) ** (1/2)
+    else: # 숫자가 아닌 경우
+        raise TypeError('숫자를 입력해 주세요!')
