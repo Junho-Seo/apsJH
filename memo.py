@@ -1,23 +1,16 @@
-def binary_search(target):
-    left, right = 1, 50
-    middle = -1
-    cnt = 0
+# 1206 [S/W 문제해결 기본] 1일차 - View
 
-    while middle != target:
-        middle = (left + right) // 2
+for test_case in range(10):
+    N = int(input())
+    arr = list(map(int, input().split()))
 
-        if target < middle:
-            right = middle - 1
-        else:
-            left = middle + 1
+    result = 0
 
-        cnt += 1
-
-    print(f'{cnt}번 만에 검색 완료!')
+    for i in range(2, N-2):
+        now = arr[i]
 
 
-binary_search(37)
-binary_search(12)
-binary_search(3)
-binary_search(1)
-binary_search(14)
+
+
+# 1208 [S/W 문제해결 기본] 1일차 - Flatten
+
