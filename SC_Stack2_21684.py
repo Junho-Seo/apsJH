@@ -29,7 +29,7 @@ def dfs(y, x):
     # base case 종료 조건(기저 조건)
     if y == endy and x == endx:
         result = 1  # 도착했다면 return에 1 할당
-        return      ## 뭘 리턴한다는거지
+        return      # 함수 종료
 
     # next call 다음 재귀 호출
     for i in range(4):
@@ -49,7 +49,8 @@ def dfs(y, x):
         if visited[newy][newx]:
             continue
         # 강의라 3가지 조건을 분리했지만 한 줄로 or로 작성해도 됨
-
+        # if newy < 0 or newy >= N or newx < 0 or newx >= N or graph[newy][newx] == 1 or visited[newy][newx]:
+        #     continue
         visited[newy][newx] = 1  # 방문처리
         dfs(newy, newx)  # 다음 좌표로 이동
 
