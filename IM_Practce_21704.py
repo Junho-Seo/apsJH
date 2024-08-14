@@ -1,6 +1,7 @@
 #21704 .바이러스 죽이기
 
-# 이차원 리스트 + 백터 탐색
+# 이차원 리스트 + 델타 탐색
+# 십자가 아닌 다른 모양의 경우는 어떻게 되는지 생각해보기.
 """
 바이러스가 한 마을을 집어삼켰다
 
@@ -51,26 +52,32 @@ N x N 크기의 마을의 한 위치에 차르봄바를 떨어뜨려, 가장 많
 #3 40
 #4 81
 
-위 문제를 파이썬 코드로 한글 주석과 함께 함수를 사용한 버전과 사용하지 않은 버전으로 작성해줘.
 """
+# 우 하 좌 상
+di = [0, 1, 0, -1]
+dj = [1, 0, -1, 0]
 
 T = int(input())
 
 for tc in range(1, T+1):
     N, P = map(int, input().split())
     village = [list(map(int, input().split()))for _ in range(N)]
-    ans = 0
+    ans = 0     # 최대 바이러스 수 초기화
 
-    for i in range(N-P+1):
-        for j in range(N-P+1):
-            temp = 0
-            for x in range(P):
-                for y in range(P):
-                    temp += village[i + x][j + y]
+    for i in range(N):
+        for j in range(N):
+            temp = village[i][j]        # 해당 칸 포함. 미포함이면 0
+            for y in range(4):
+                for x in range(1, P+1):
+                    new_i = i + di[y]*x
+                    new_j = j + dj[y]*x
+                    if 0 > new_i or new_i >= N or 0 > new_j or new_j >= N:
+                        continue
+                    temp += village[new_i][new_j]
 
             # 최대 바이러스 제거 수 갱신
             if temp > ans:
                 ans = temp
 
-        # 결과 출력
-        print(f"#{tc} {ans}")
+
+    print(f"#{tc} {ans}")
