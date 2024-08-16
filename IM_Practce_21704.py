@@ -1,7 +1,7 @@
-#21704 .바이러스 죽이기
+# 21704 .바이러스 죽이기
 
 # 이차원 리스트 + 델타 탐색
-# 십자가 아닌 다른 모양의 경우는 어떻게 되는지 생각해보기.
+# 십자가 아닌 다른 모양의 경우는 어떻게 되는지 생각해보기. (x자, 사각형 등)
 """
 바이러스가 한 마을을 집어삼켰다
 
@@ -59,25 +59,26 @@ dj = [1, 0, -1, 0]
 
 T = int(input())
 
-for tc in range(1, T+1):
+for tc in range(1, T + 1):
     N, P = map(int, input().split())
-    village = [list(map(int, input().split()))for _ in range(N)]
-    ans = 0     # 최대 바이러스 수 초기화
-
+    village = [list(map(int, input().split())) for _ in range(N)]
+    ans = 0  # 최대 바이러스 제거 합 변수 초기화
+    # 모든 위치 탐색
     for i in range(N):
         for j in range(N):
-            temp = village[i][j]        # 해당 칸 포함. 미포함이면 0
-            for y in range(4):
-                for x in range(1, P+1):
-                    new_i = i + di[y]*x
-                    new_j = j + dj[y]*x
+            temp = village[i][j]  # 선택 칸 포함. 미포함이면 0
+            for y in range(4):  # 델타 방향 순회
+                for x in range(1, P + 1):  # 1부터 P까지 십자 거리
+                    new_i = i + di[y] * x
+                    new_j = j + dj[y] * x
+                    # 제약 조건 continue
                     if 0 > new_i or new_i >= N or 0 > new_j or new_j >= N:
                         continue
+                    # 선택 위치 합계
                     temp += village[new_i][new_j]
 
-            # 최대 바이러스 제거 수 갱신
+            # 최대 바이러스 제거 합 갱신
             if temp > ans:
                 ans = temp
-
 
     print(f"#{tc} {ans}")
