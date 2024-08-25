@@ -1,3 +1,6 @@
+# 21437 . [파이썬 S/W 문제해결 기본] 1일차 - min max
+# 라이브 강사님 풀이
+
 '''
 N개의 양의 정수에서 가장 큰 수와 가장 작은 수의 차이를 출력하시오.
 
@@ -29,9 +32,9 @@ N개의 양의 정수에서 가장 큰 수와 가장 작은 수의 차이를 출
 '''
 # 수도코드 작성시 참고사항
 # 비교 연산자 사용 시 배정 연산과 비교문 순서를 맞춰주는게 정리하기 쉬움
-
-import sys
-sys.stdin = open("C:/Users/SSAFY/Downloads/sample_input (2).txt", "r")
+#
+# import sys
+# sys.stdin = open("C:/Users/SSAFY/Downloads/sample_input (2).txt", "r")
 
 T = int(input())  # 테스트케이스 개수
 for test_case in range(1, T + 1):

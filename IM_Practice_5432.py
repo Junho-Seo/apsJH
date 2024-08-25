@@ -1,5 +1,5 @@
 # 5432. 쇠막대기 자르기
-# 성빈님 코드참고
+# 성빈님 코드
 
 import sys
 sys.stdin = open("input5432.txt", "r")
