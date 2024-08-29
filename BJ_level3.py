@@ -15,6 +15,11 @@
 
 # 8393. 합
 
-N = int(input())
+# N = int(input())
+# ans = 0
+# for i in range(1, N+1):
+#     ans += i
+#
+# print(ans)
 
-for i in range(1, N+1):
+# 25304.영수증
