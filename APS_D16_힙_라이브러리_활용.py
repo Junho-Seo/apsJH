@@ -17,6 +17,7 @@ heap = []  # 최대힙을 구현하기 위한 리스트
 for num in arr:
     heappush(heap, num)
 
+print(heap)
 print([x for x in heap])  # 힙의 내부 상태를 출력 (음수로 저장된 상태)
 
 while heap:
@@ -30,6 +31,7 @@ print('\n------------------------------------')
 for num in arr:
     heappush(heap, -num)
 
+print(heap)
 print([-x for x in heap])  # 힙의 내부 상태를 출력 (음수로 저장된 상태)
 
 while heap:

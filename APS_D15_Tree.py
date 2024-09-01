@@ -15,11 +15,15 @@ def preorder(node):
     if node == 0:
         return
 
-    print(node, end=' ')        # 부모를 먼저 확인
+    preo.append(node)
+    # print(node, end=' ')        # 부모를 먼저 확인
     preorder(left[node])
+    io.append(node)
     # print(node, end=' ')        # 왼쪽을 보고 나서, 부모 확인 (중위)
     preorder(right[node])
+    posto.append(node)
     # print(node, end=' ')        # 왼쪽 > 오른쪽을 보고 나서 부모 확인 (후위)
+
 
 
 N = int(input())    # 정점의 개수(정점: 1~N번)
@@ -39,8 +43,14 @@ for i in range(0, len(arr), 2):
     else:
         right[parent] = child
 
-# print(left)
-# print(right)
+print(left)
+print(right)
+preo = []
+io = []
+posto = []
 
 root = 1 # 시작점을 1이라 가정
 preorder(root)
+print(preo)
+print(io)
+print(posto)

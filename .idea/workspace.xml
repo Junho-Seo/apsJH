@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5f4fb648-d1cc-49a9-84e2-4d8db4ee8b6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP_D16_BST.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_BST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP_D16_최대힙.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_최대힙.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP_D16_최소힙.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_최소힙.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP_D16_힙_라이브러리_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_힙_라이브러리_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BJ_level3.py" beforeDir="false" afterPath="$PROJECT_DIR$/BJ_level3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APS_D15_Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D15_Tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APS_D16_최대힙.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_최대힙.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APS_D16_힙_라이브러리_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/APS_D16_힙_라이브러리_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SC_Tree_subtree.py" beforeDir="false" afterPath="$PROJECT_DIR$/SC_Tree_subtree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SC_Tree_이진탐색.py" beforeDir="false" afterPath="$PROJECT_DIR$/SC_Tree_이진탐색.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SC_Tree_중위순회.py" beforeDir="false" afterPath="$PROJECT_DIR$/SC_Tree_중위순회.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputsubtree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputsubtree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output석주트리.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output석주트리.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output이진트리.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output이진트리.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +48,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.BJ_level5">
-    <configuration name="BJ_level3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.IM_Practice_건성테러">
+    <configuration name="APS_D16_힙_라이브러리_활용" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aspJH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -59,7 +63,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BJ_level3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/APS_D16_힙_라이브러리_활용.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -68,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BJ_level4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="IM_Practice_건성테러" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aspJH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -80,7 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BJ_level4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IM_Practice_건성테러.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BJ_level5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SC_Graph_석주트리" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aspJH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,7 +105,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BJ_level5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Graph_석주트리.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SC_Priority_폭탄로봇" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SC_Tree_이진탐색" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aspJH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,7 +126,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Priority_폭탄로봇.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Tree_이진탐색.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SC_Priority_건성테러2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SC_Tree_subtree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aspJH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,28 +147,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Priority_건성테러2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SC_Tree_사칙연산" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aspJH" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Tree_사칙연산.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SC_Tree_subtree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BJ_level5" />
-        <item itemvalue="Python.BJ_level4" />
-        <item itemvalue="Python.BJ_level3" />
-        <item itemvalue="Python.SC_Priority_폭탄로봇" />
-        <item itemvalue="Python.SC_Priority_건성테러2" />
+        <item itemvalue="Python.IM_Practice_건성테러" />
+        <item itemvalue="Python.SC_Tree_이진탐색" />
+        <item itemvalue="Python.SC_Tree_subtree" />
+        <item itemvalue="Python.SC_Graph_석주트리" />
+        <item itemvalue="Python.APS_D16_힙_라이브러리_활용" />
       </list>
     </recent_temporary>
   </component>
@@ -213,11 +196,6 @@
           <url>file://$PROJECT_DIR$/APS_D15_Tree.py</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SC_Tree_subtree.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SC_Priority_폭탄로봇.py</url>

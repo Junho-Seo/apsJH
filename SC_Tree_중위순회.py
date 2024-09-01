@@ -38,3 +38,50 @@ for tc in range(1, 11):
     dfs(1)
     print(f'#{tc}', end=' ')
     print(''.join(result))
+
+
+T = int(input())
+
+for tc in range(1,T+1):
+    N, M, L = map(int,input().split())
+
+    tree = [0]*(N+1)
+
+    for _ in range(M):
+        n, v = map(int,input().split())
+        tree[n] = v
+
+    for node in range(N,0,-2):
+        p = node//2
+        l,r = p*2, p*2+1
+        if r > N:
+            r=0
+        tree[p] = tree[l] + tree[r]
+
+    print(f'#{tc} {tree[L]}')
+
+#----------------------------------
+
+
+def dp_tree(num, arr, target):
+    if num <= target:
+        return arr
+    if num % 2 == 1:
+        arr[(num - 1) // 2] = arr[num - 1] + arr[num]
+        return dp_tree(num - 2, arr, target)
+    else:
+        arr[num // 2] = arr[num]
+        return dp_tree(num - 1, arr, target)
+
+
+T = int(input())
+for tc in range(1, T + 1):
+    N, M, L = map(int, input().split())
+    number = [0] * (N + 1)
+
+    for _ in range(M):
+        a, b = map(int, input().split())
+        number[a] = b
+
+    number = dp_tree(N, number, L)
+    print(f'#{tc} {number[L]}')
