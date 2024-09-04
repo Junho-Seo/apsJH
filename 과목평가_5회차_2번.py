@@ -1,25 +1,31 @@
-# 비트연산을 이용한 풀이
-def inorder(v): # 중위순회
-    global pwd
-    if v<8:
-        inorder(v*2)
-        pwd += str(tree[v])
-        inorder(v*2+1)
+def inorder(v):  # 중위 순회 함수
+    global pwd  # 결과로 사용할 문자열을 전역 변수로 선언
+    if v < 8:  # 트리의 범위 안에서만 수행
+        inorder(v * 2)  # 왼쪽 자식 노드를 재귀적으로 방문
+        pwd += str(tree[v])  # 현재 노드의 값을 문자열로 추가
+        inorder(v * 2 + 1)  # 오른쪽 자식 노드를 재귀적으로 방문
 
-T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    txt = input()
-    print(f'#{tc}', end = ' ')
+
+T = int(input())  # 테스트 케이스의 수를 입력받음
+for tc in range(1, T + 1):  # 각 테스트 케이스에 대해 반복
+    N = int(input())  # 문자열의 길이를 입력받음
+    txt = input()  # 문자열을 입력받음
+    print(f'#{tc}', end=' ')  # 테스트 케이스 번호 출력 (줄바꿈 없이)
+
+    # 문자열의 각 문자에 대해 반복
     for x in txt:
-        asc = ord(x)
-        tree = [0] * 8
+        asc = ord(x)  # 문자를 아스키 코드 값으로 변환
+        tree = [0] * 8  # 7개의 노드를 가진 이진 트리를 초기화
+
+        # 아스키 코드를 이진수로 변환하여 트리 노드에 저장
         for i in range(1, 8):
-            if asc & (1<<7-i):
-                tree[i] = 1
+            if asc & (1 << 7 - i):  # 아스키 코드의 각 비트를 확인
+                tree[i] = 1  # 해당 위치의 비트가 1이면 트리 노드에 1 저장
             else:
-                tree[i] = 0
-        pwd = ''
-        inorder(1)
-        print(pwd, end = ' ')
-    print()
+                tree[i] = 0  # 그렇지 않으면 0 저장
+
+        pwd = ''  # 결과 문자열 초기화
+        inorder(1)  # 트리의 루트 노드부터 중위 순회 시작
+        print(pwd, end=' ')  # 현재 문자의 이진수 표현을 출력 (줄바꿈 없이)
+
+    print()  # 각 테스트 케이스 출력 후 줄바꿈
