@@ -76,46 +76,56 @@ board는 따로 생성할 필요가 없습니다.
 # 최적화 포인트
 # 패턴을 미리 저장하지 않고, 현재 좌표와 색에 따라 패턴을 실시간으로 계산
 
-N, M = map(int, input().split())
-arr = [input() for _ in range(N)]
-
-
-def count_repaints(x, y):
-    count1 = 0  # 좌상단이 'W'로 시작하는 패턴에 맞추기 위한 다시 칠하기 횟수
-    count2 = 0  # 좌상단이 'B'로 시작하는 패턴에 맞추기 위한 다시 칠하기 횟수
-
-    # 8x8 부분을 순회하며 다시 칠해야 하는 칸 계산
-    for i in range(8):
-        for j in range(8):
-            # 현재 칸의 색이 어떻게 되어야 하는지 계산
-            if (i + j) % 2 == 0:  # 좌상단과 같은 색이어야 하는 칸 (i+j가 짝수인 칸)
-                if arr[x + i][y + j] != 'W':  # 'W'로 시작하는 체스판과 비교
-                    count1 += 1
-                if arr[x + i][y + j] != 'B':  # 'B'로 시작하는 체스판과 비교
-                    count2 += 1
-            else:  # 좌상단과 반대 색이어야 하는 칸
-                if arr[x + i][y + j] != 'B':  # 'W'로 시작하는 체스판과 비교
-                    count1 += 1
-                if arr[x + i][y + j] != 'W':  # 'B'로 시작하는 체스판과 비교
-                    count2 += 1
-
-    # 두 패턴 중 최소 칠하기 횟수를 반환
-    return min(count1, count2)
-
-
-min_repaints = float('inf')  # 무한대 저장 (매우 큰 임의의 수)
-
-# 8x8 부분을 순회하며 다시 칠하기 횟수 계산
-for i in range(N - 7):
-    for j in range(M - 7):
-        repaints = count_repaints(i, j)
-        min_repaints = min(min_repaints, repaints)
-
-# 최소 다시 칠하기 횟수 출력
-print(min_repaints)
+# N, M = map(int, input().split())
+# arr = [input() for _ in range(N)]
+#
+#
+# def count_repaints(x, y):
+#     count1 = 0  # 좌상단이 'W'로 시작하는 패턴에 맞추기 위한 다시 칠하기 횟수
+#     count2 = 0  # 좌상단이 'B'로 시작하는 패턴에 맞추기 위한 다시 칠하기 횟수
+#
+#     # 8x8 부분을 순회하며 다시 칠해야 하는 칸 계산
+#     for i in range(8):
+#         for j in range(8):
+#             # 현재 칸의 색이 어떻게 되어야 하는지 계산
+#             if (i + j) % 2 == 0:  # 좌상단과 같은 색이어야 하는 칸 (i+j가 짝수인 칸)
+#                 if arr[x + i][y + j] != 'W':  # 'W'로 시작하는 체스판과 비교
+#                     count1 += 1
+#                 if arr[x + i][y + j] != 'B':  # 'B'로 시작하는 체스판과 비교
+#                     count2 += 1
+#             else:  # 좌상단과 반대 색이어야 하는 칸
+#                 if arr[x + i][y + j] != 'B':  # 'W'로 시작하는 체스판과 비교
+#                     count1 += 1
+#                 if arr[x + i][y + j] != 'W':  # 'B'로 시작하는 체스판과 비교
+#                     count2 += 1
+#
+#     # 두 패턴 중 최소 칠하기 횟수를 반환
+#     return min(count1, count2)
+#
+#
+# min_repaints = float('inf')  # 무한대 저장 (매우 큰 임의의 수)
+#
+# # 8x8 부분을 순회하며 다시 칠하기 횟수 계산
+# for i in range(N - 7):
+#     for j in range(M - 7):
+#         repaints = count_repaints(i, j)
+#         min_repaints = min(min_repaints, repaints)
+#
+# # 최소 다시 칠하기 횟수 출력
+# print(min_repaints)
 
 #------------------------------------------------------
 # 누적 합 기법 적용 풀이
+
+'''
+하나의 누적합 배열 사용: prefix_W와 prefix_B 두 개의 배열을 사용하지 않고,
+하나의 배열만을 사용하여 계산 중에 두 패턴을 각각 처리할 수 있습니다.
+계산을 할 때마다 패턴을 확인하고, 필요한 경우 패턴을 전환하여 값을 비교합니다.
+
+동적 배열 크기 축소: 누적합 배열을 N+1 × M+1 크기로 유지하는 대신,
+슬라이딩 윈도우 기법을 사용하여 8×(M+1) 크기의 배열만 유지합니다.
+즉, 이전 행의 정보를 재사용하면서 새로운 행을 추가할 때만 필요한 연산을 수행하는 방식입니다.
+'''
 
 N, M = map(int, input().split())
 arr = [input() for _ in range(N)]
