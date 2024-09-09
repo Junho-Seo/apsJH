@@ -53,7 +53,9 @@ for _ in range(M):
     s, e, w = map(int,input().split())
     graph[s].append((w, e))
     graph[e].append((w, s))
-
+for i in range(N):
+    print(graph[i])
+# 0에서 시작했을 때 index 정점까지의 최단 거리
 dijkstra(0)  # [0, 2, 5, 3, 5, 9]
 
 # [개인적 궁금증] 다익스트라 그리디 증명 찾아보기 (귀납법 이용)
