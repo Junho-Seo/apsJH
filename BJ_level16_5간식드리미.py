@@ -5,10 +5,14 @@ N = int(input())
 waiting = list(map(int, input().split()))
 
 stack = []
-
-# waiting의 앞부터 1이 나오면 pop,
-# not stack 이면 nice
-
+target = 1
 for i in waiting:
     stack.append(i)
-    if stack[i] > stack[i+1]:
+    while stack and stack[-1] == target:
+        stack.pop()
+        target += 1
+
+if stack:
+    print("Sad")
+else:
+    print("Nice")
